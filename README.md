@@ -1,10 +1,11 @@
 # ALU-16bit-RTL-to-GDSII
-This repository presents the design and implementation of a 16-bit Arithmetic Logic Unit (ALU) using Verilog HDL, following a complete ASIC design flow from RTL design to physical verification.
-rification.
+This repository presents the design and implementation of a 16-bit Arithmetic Logic Unit (ALU) using Verilog HDL, following an academic ASIC design flow from RTL design to physical layout and verification.
+
+The project emphasizes RTL correctness, synthesis awareness, and physical design understanding using Cadence Virtuoso.
 
 ## ALU Overview
 
-The ALU operates on 16-bit inputs and supports arithmetic, logical, and shift operations controlled via a 4-bit select signal.
+The ALU operates on 16-bit inputs and supports arithmetic, logical, and shift operations controlled via a 4-bit select (control) signal.
 
 ### Supported Operations
 | ALU_Sel	| Operation         |
@@ -27,16 +28,14 @@ Carry-out is generated for arithmetic operations.
 ## Architecture
 - Pure combinational ALU
 - Case-based operation selection
-- Modular RTL design
-- Synthesizable Verilog
+- Synthesizable Verilog RTL
+- Modular and readable design style
 
-## Verification
-- Functional Simulation
-- RTL simulation using Verilog testbench
-- Exhaustive operation testing via ALU select iteration
-- Post-Synthesis Simulation
-- Gate-level netlist simulation
-- SDF back-annotation for timing verification
+## Verification & Analysis
+- Functional verification performed at RTL level using a Verilog testbench
+- All operations validated through exhaustive stimulus
+- Logic synthesis and physical design analyzed within Cadence tools
+- Timing, connectivity, and layout correctness verified using tool-generated reports
 
 ## ASIC Design Flow
 - RTL Coding (Verilog)
@@ -50,13 +49,15 @@ Carry-out is generated for arithmetic operations.
 - Timing Analysis (Pre-CTS)
 - Geometry & Connectivity Verification
 
+Note: Intermediate netlists and timing files were analyzed within the EDA environment and are not exported in this repository.
+
 ## Repository Structure
-- rtl/ → Verilog RTL source
+- rtl/ → Verilog RTL source code
 - tb/ → Testbenches
 - synthesis/ → Synthesis scripts and reports
 - post_synthesis/ → Netlist and SDF
 - physical_design/ → P&R and timing artifacts
-- docs/ → Architecture and design explanations
+- docs/ → Architecture and design documentation
 
 ## Disclaimer
 - This repository contains original academic work only.
@@ -64,7 +65,8 @@ Carry-out is generated for arithmetic operations.
 
 ## Key Skills Demonstrated
 - RTL design using Verilog HDL
-- ASIC synthesis and timing analysis
-- Gate-level simulation with SDF
+- Understanding of ASIC synthesis and physical design flow
+- Layout-level verification concepts (DRC / LVS)
+- Timing awareness and report-based analysis
 - Physical design flow understanding
 - Digital design verification methodology
