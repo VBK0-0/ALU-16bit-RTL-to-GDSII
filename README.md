@@ -70,3 +70,6 @@ Note: Intermediate netlists and timing files were analyzed within the EDA enviro
 - Timing awareness and report-based analysis
 - Physical design flow understanding
 - Digital design verification methodology
+
+## References
+This project was a part of my B. Tech Assignments which was to be done in Cadence Encounter.
